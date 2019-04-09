@@ -1,0 +1,79 @@
+name: CaexCore
+main: net.ddns.yonatand.Main
+version: 1.0
+author: yonatand
+commands:
+   tp:
+      description: This teleports you to a player.
+      usage: /Tp [player]
+      permission: CaexCore.Tp
+      permission-message: You don't have the permissions to run this command.
+      aliases: [to]
+   tphere:
+      description: This teleports a player to you.
+      usage: /Tphere [player]
+      permission: CaexCore.Tphere
+      permission-message: You don't have the permissions to run this command.
+      aliases: [get]
+   gm:
+      description: set your gamemode.
+      usage: /Gm [0/1/2/3] [Optional username]
+      permission: CaexCore.Gm
+      permission-message: You don't have the permissions to run this command.
+      aliases: [gamemode]
+   setspawn:
+      description: This sets the server's spawn
+      usage: /setspawn
+      permission: CaexCore.setspawn
+      permission-message: You don't have the permissions to run this command.
+   spawn:
+      description: This teleports you to the lobby
+      usage: /spawn
+      permission: CaexCore.spawn
+      permission-message: You don't have the permissions to run this command.
+      aliases: [lobby]
+   addwarp:
+      description: This adds a warp
+      usage: /addwarp [name]
+      permission: CaexCore.addwarp
+      permission-message: You don't have the permissions to run this command.
+   deletewarp:
+      description: This deletes a warp
+      usage: /deletewarp [name]
+      permission: CaexCore.deletewarp
+      permission-message: You don't have the permissions to run this command.
+   warp:
+      description: warp
+      usage: /warp [name]
+      permission: CaexCore.warp
+      permission-message: You don't have the permissions to run this command.
+   tele:
+      description: test tele effect command
+      usage: /tele
+      permission: CaexCore.tele
+      permission-message: You don't have the permissions to run this command.
+   givegold:
+      description: gives you special gold
+      usage: /givegold [ammount]
+      permission: CaexCore.givegold
+      permission-message: You don't have the permissions to run this command.
+   homes:
+      description: shows your list of homes
+      usage: /homes
+      permission: CaexCore.homes
+      permission-message: You don't have the permissions to run this command.
+   addhome:
+      description: adds a home to your homes
+      usage: /home [name]
+      permission: CaexCore.addhome
+      permission-message: You don't have the permissions to run this command.
+   deletehome:
+      description: deletes a home
+      usage: /deletehome [name]
+      permission: CaexCore.delhome
+      permission-message: You don't have the permissions to run this command.
+   home:
+      description: teleports you to a home
+      usage: /home [name]
+      permission: CaexCore.home
+      permission-message: You don't have the permissions to run this command.
