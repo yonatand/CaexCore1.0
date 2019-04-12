@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="CaexCore:jar">
+    <output-path>J:/plugins-bukkit-server-1.13.2/plugins</output-path>
+    <root id="root">
+      <element id="archive" name="CaexCore.jar">
+        <element id="module-output" name="CaexCore" />
+      </element>
+    </root>
+  </artifact>
+</component>

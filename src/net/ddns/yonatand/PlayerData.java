@@ -11,6 +11,7 @@ public class PlayerData {
             return false;
 
         caexData.setPlayer(ply,".homes", "");
+        caexData.setPlayer(ply,".nick", "");
         caexData.save();
 
         return true;

@@ -15,9 +15,9 @@ public class YamlConfig {
             else{
                 String name = (String)caexData.getConfig("chatName");
                 if(name.charAt(name.length()-1)==' ')
-                    chatName=name;
+                    chatName=Color.updateColor(name);
                 else
-                    chatName=name+" ";
+                    chatName=Color.updateColor(name)+" ";
             }
         }
         else{

@@ -65,6 +65,10 @@ public class CaexData extends AbstractFile {
         return this.config.isSet("players."+ply.getUniqueId().toString());
     }
 
+    public boolean playerNickExists(Player ply){
+        return this.config.isSet("players."+ply.getUniqueId().toString()+".nick");
+    }
+
     public void setConfig(String at, String data){
         this.config.set("config."+at,data);
     }

@@ -14,7 +14,7 @@ import static net.ddns.yonatand.FindOnlinePlayerUUID.findOnlinePlayerUUID;
 
 public class Main extends JavaPlugin {
 
-    protected static String bPerm="CaexCore.";
+    public static String bPerm="CaexCore.";
 
     public static CaexData caexData;
 
@@ -148,6 +148,12 @@ public class Main extends JavaPlugin {
         else if(cmd.getName().equalsIgnoreCase("home")){
 
             return Home.homeCom(sender,cmd,label,args);
+
+        }
+
+        else if(cmd.getName().equalsIgnoreCase("nick")){
+
+            return Nick.nickCom(sender,cmd,label,args);
 
         }
 
