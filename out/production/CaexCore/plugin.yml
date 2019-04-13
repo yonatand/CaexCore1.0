@@ -1,5 +1,5 @@
 name: CaexCore
-main: net.ddns.yonatand.Main
+main: net.ddns.yonatand.core.Main
 version: 1.0
 author: yonatand
 commands:
@@ -81,4 +81,24 @@ commands:
       description: sets your nickname
       usage: /nick [name]
       permission: CaexCore.nick
+      permission-message: You don't have the permissions to run this command.
+   resetnick:
+      description: resets your nickname
+      usage: /resetnick
+      permission: CaexCore.nick
+      permission-message: You don't have the permissions to run this command.
+   addgroup:
+      description: test command
+      usage: test
+      permission: CaexCore.test
+      permission-message: You don't have the permissions to run this command.
+   prefixgroup:
+      description: test command
+      usage: test
+      permission: CaexCore.test
+      permission-message: You don't have the permissions to run this command.
+   joingroup:
+      description: test command
+      usage: test
+      permission: CaexCore.test
       permission-message: You don't have the permissions to run this command.
