@@ -43,19 +43,19 @@ public class Main extends JavaPlugin {
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
-        if (cmd.getName().equalsIgnoreCase("Tp")) {
+        if (cmd.getName().equalsIgnoreCase("tp")) {
 
             return Tp.tp(sender,cmd,label,args);
 
         }
 
-        else if(cmd.getName().equalsIgnoreCase("Tphere")){
+        else if(cmd.getName().equalsIgnoreCase("tphere")){
 
             return Tphere.tphere(sender,cmd,label,args);
 
         }
 
-        else if(cmd.getName().equalsIgnoreCase("Gm")){
+        else if(cmd.getName().equalsIgnoreCase("gm")){
 
             return Gm.gm(sender,cmd,label,args);
 
@@ -163,23 +163,12 @@ public class Main extends JavaPlugin {
 
         }
 
-        else if(cmd.getName().equalsIgnoreCase("addgroup")){
+        else if(cmd.getName().equalsIgnoreCase("addportal")){
 
-            return Group.addTeam(args[0]);
-
-        }
-
-        else if(cmd.getName().equalsIgnoreCase("prefixgroup")){
-
-            return Group.prefixTeam(args[0],args[1]);
+            return Portals.addPortalCom(sender,cmd,label,args);
 
         }
 
-        else if(cmd.getName().equalsIgnoreCase("joingroup")){
-
-            return Group.addPlayerToTeam((Player)sender,args[0]);
-
-        }
 
         return false;
     }

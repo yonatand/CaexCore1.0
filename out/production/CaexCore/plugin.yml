@@ -2,23 +2,24 @@ name: CaexCore
 main: net.ddns.yonatand.core.Main
 version: 1.0
 author: yonatand
+api-version: 1.13
 commands:
    tp:
       description: This teleports you to a player.
-      usage: /Tp [player]
-      permission: CaexCore.Tp
+      usage: /tp [player]
+      permission: CaexCore.tp
       permission-message: You don't have the permissions to run this command.
       aliases: [to]
    tphere:
       description: This teleports a player to you.
-      usage: /Tphere [player]
-      permission: CaexCore.Tphere
+      usage: /tphere [player]
+      permission: CaexCore.tphere
       permission-message: You don't have the permissions to run this command.
       aliases: [get]
    gm:
       description: set your gamemode.
-      usage: /Gm [0/1/2/3] [Optional username]
-      permission: CaexCore.Gm
+      usage: /gm [0/1/2/3] [Optional username]
+      permission: CaexCore.gm
       permission-message: You don't have the permissions to run this command.
       aliases: [gamemode]
    setspawn:
@@ -37,11 +38,13 @@ commands:
       usage: /addwarp [name]
       permission: CaexCore.addwarp
       permission-message: You don't have the permissions to run this command.
+      aliases: [setwarp]
    deletewarp:
       description: This deletes a warp
       usage: /deletewarp [name]
       permission: CaexCore.deletewarp
       permission-message: You don't have the permissions to run this command.
+      aliases: [delwarp]
    warp:
       description: warp
       usage: /warp [name]
@@ -72,6 +75,7 @@ commands:
       usage: /deletehome [name]
       permission: CaexCore.delhome
       permission-message: You don't have the permissions to run this command.
+      aliases: [delhome]
    home:
       description: teleports you to a home
       usage: /home [name]
@@ -87,18 +91,56 @@ commands:
       usage: /resetnick
       permission: CaexCore.nick
       permission-message: You don't have the permissions to run this command.
-   addgroup:
-      description: test command
-      usage: test
-      permission: CaexCore.test
+      aliases: [rnick]
+   addportal:
+      description: adds a portal
+      usage: /addportal
+      permission: CaexCore.addportal
       permission-message: You don't have the permissions to run this command.
-   prefixgroup:
-      description: test command
-      usage: test
-      permission: CaexCore.test
-      permission-message: You don't have the permissions to run this command.
-   joingroup:
-      description: test command
-      usage: test
-      permission: CaexCore.test
-      permission-message: You don't have the permissions to run this command.
+permissions:
+    CaexCore.color:
+        description: gives all color perms for this plugin
+        default: op
+        children:
+            CaexCore.color.chat:
+                default: op
+            CaexCore.color.sign:
+                default: op
+    CaexCore.*:
+        description: gives all permissions for the plugin
+        default: op
+        children:
+            CaexCore.tp:
+                default: op
+            CaexCore.tphere:
+                default: op
+            CaexCore.gm:
+                default: op
+            CaexCore.setspawn:
+                default: op
+            CaexCore.spawn:
+                default: op
+            CaexCore.addwarp:
+                default: op
+            CaexCore.deletewarp:
+                default: op
+            CaexCore.warp:
+                default: op
+            CaexCore.tele:
+                default: false
+            CaexCore.givegold:
+                default: op
+            CaexCore.homes:
+                default: op
+            CaexCore.addhome:
+                default: op
+            CaexCore.delhome:
+                default: op
+            CaexCore.home:
+                default: op
+            CaexCore.nick:
+                default: op
+            CaexCore.resetnick:
+                default: op
+    CaexCore.addportal:
+        default: false

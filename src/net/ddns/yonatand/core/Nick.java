@@ -20,9 +20,9 @@ public class Nick {
 
         Team team = Group.getPlayerGroup((Player)sender);
         if(team!=null) {
-            ((Player)sender).setDisplayName(team.getPrefix()+args[0]+ChatColor.RESET);
+            ((Player)sender).setDisplayName(team.getPrefix()+team.getColor()+ChatColor.ITALIC+args[0]+ChatColor.RESET);
         }else{
-            ((Player)sender).setDisplayName(args[0]+ChatColor.RESET);
+            ((Player)sender).setDisplayName(ChatColor.ITALIC+args[0]+ChatColor.RESET);
         }
 
         caexData.setPlayer((Player)sender,".nick",args[0]);
@@ -47,15 +47,21 @@ public class Nick {
     public static void setNick(Player ply){
         Team team = Group.getPlayerGroup(ply);
         if(team!=null) {
-            ply.setDisplayName(team.getPrefix()+(String)caexData.getPlayer(ply,".nick")+ChatColor.RESET);
+            if(((String)caexData.getPlayer(ply,".nick")).equals(""))
+                setOnlyTeamPrefix(ply,team);
+            else
+                ply.setDisplayName(team.getPrefix()+team.getColor()+ChatColor.ITALIC+(String)caexData.getPlayer(ply,".nick")+ChatColor.RESET);
         }else{
-            ply.setDisplayName((String)caexData.getPlayer(ply,".nick")+ChatColor.RESET);
+            if(((String)caexData.getPlayer(ply,".nick")).equals(""))
+                ply.setDisplayName(ply.getName()+ChatColor.RESET);
+            else
+                ply.setDisplayName(ChatColor.ITALIC+(String)caexData.getPlayer(ply,".nick")+ChatColor.RESET);
         }
     }
 
     public static void setOnlyTeamPrefix(Player ply, Team team){
 
-        ply.setDisplayName(team.getPrefix()+ply.getName()+ChatColor.RESET);
+        ply.setDisplayName(team.getPrefix()+team.getColor()+ply.getName()+ChatColor.RESET);
 
     }
 

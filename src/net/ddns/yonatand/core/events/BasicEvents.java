@@ -24,9 +24,9 @@ public class BasicEvents implements Listener {
 
         if(!PlayerData.playerExists(ply)){
 
-            gold.giveGold(ply,10);
+            //gold.giveGold(ply,10);
             ply.sendMessage(ymlConfig.chatName+"Welcome, "+ply.getName()+", to the Elixia world!");
-            ply.sendMessage(ymlConfig.chatName+"You got 10 Special Gold ingots as starting money.");
+            //ply.sendMessage(ymlConfig.chatName+"You got 10 Special Gold ingots as starting money.");
             ply.sendMessage(ymlConfig.chatName+"Enjoy your stay!");
 
             PlayerData.addPlayer(event.getPlayer());

@@ -14,7 +14,7 @@ import static org.bukkit.Bukkit.getServer;
 public class Tp {
 
     protected static boolean tp(CommandSender sender, Command cmd, String label, String[] args){
-        if(!sender.hasPermission(bPerm+"Tp")){ //perm check
+        if(!sender.hasPermission(bPerm+"tp")){ //perm check
             return false;
         }
         else if(!(sender instanceof Player)){ //is player check

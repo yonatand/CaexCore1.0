@@ -83,7 +83,7 @@ public class Warps {
             return false;
         }
 
-        if(!sender.hasPermission(bPerm+"warp."+args[0])){
+        if(!(sender.hasPermission(bPerm+"warp."+args[0]) || sender.hasPermission(bPerm+"warp.*"))){
             sender.sendMessage(ymlConfig.chatName+"you don't have permissions to go there!");
             return false;
         }
